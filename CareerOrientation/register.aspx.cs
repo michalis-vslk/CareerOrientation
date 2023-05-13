@@ -58,8 +58,8 @@ namespace CareerOrientation
             
             if (bol)
             {
-                Client c0 = new Client();
-                c0.profileCreateClient(email.Text, username.Text, pass.Text, firstname.Text, lastname.Text, bytes, gender, TextBox1.Text, desc.Text, link.Text, emailcheck.Checked.ToString(), fullnamecheck.Checked.ToString(), gendercheck.Checked.ToString(), birthdatecheck.Checked.ToString(), pagelinkcheck.Checked.ToString());
+                User u = new User();
+                u.profileCreate(username.Text, pass.Text, email.Text, gender, TextBox1.Text);
                 Response.Redirect("index.aspx");
             }
 
