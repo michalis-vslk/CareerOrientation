@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.Sqlite;
+﻿//using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
@@ -18,7 +18,7 @@ namespace CareerOrientation
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
 
-            SQLiteConnection conn = new SqliteConnection("Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "hire_dev.client.db;Version=3;");
+            SQLiteConnection conn = new SQLiteConnection("Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "hire_dev.client.db;Version=3;");
             conn.Open();
             String query1 = "Select * from client where username='" + name1.Text + "' and pass='" + pwd.Text + "'";
             SQLiteCommand cmd = new SQLiteCommand(query1, conn);
