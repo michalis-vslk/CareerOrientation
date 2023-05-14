@@ -37,8 +37,8 @@ namespace CareerOrientation
             else
             {
                 Session["Username"] = name1.Text;
-                Session["Type"] = "Client";
-                Response.Redirect("clientMainPage.aspx");
+               
+                Response.Redirect("MainPage.aspx");
             }
             
 
