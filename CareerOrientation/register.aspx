@@ -71,8 +71,8 @@
                 
 
             <tr><td class="auto-style10">Gender</td><td style="text-align:left" class="auto-style16">
-                <asp:RadioButton ID="RadioButton1" runat="server" OnCheckedChanged="RadioButton1_CheckedChanged" Text="Male" />
-                <asp:RadioButton ID="RadioButton2" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" Text="Female" /></tr>
+                <asp:RadioButton ID="RadioButton1" runat="server" OnCheckedChanged="RadioButton1_CheckedChanged"  GroupName="gender" Text="Male" />
+                <asp:RadioButton ID="RadioButton2" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" GroupName="gender" Text="Female" /></tr>
               
 
             <tr><td class="auto-style10"><asp:label runat="server" Text="Date of Birth"></asp:label></td>

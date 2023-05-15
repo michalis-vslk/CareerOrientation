@@ -28,7 +28,7 @@
                 <tr>
                     <td><label>Username</label></td>
                     <td>
-                        <asp:TextBox runat="server" id="name1" placeholder="Enter your username"/>
+                        <asp:TextBox runat="server" id="name1" Text="pao13" placeholder="Enter your username"/>
                     </td>
                 </tr>
 
@@ -39,7 +39,8 @@
                         </label>
                     </td>
                     <td>
-                        <asp:TextBox runat="server" placeholder="Enter your password" id="pwd" TextMode="Password" />
+                        <asp:TextBox runat="server" Text="123456" placeholder="Enter your password" id="pwd"/>
+                        <!-- <asp:TextBox runat="server" Text="123456" placeholder="Enter your password" id="TextBox1" TextMode="Password" />-->
                     </td>
                 </tr>
 

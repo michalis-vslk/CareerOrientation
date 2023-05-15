@@ -25,7 +25,7 @@
             <h2>1.4 Επαγγελματικές Προοπτικές</h2>
             <p>mpla mpla mpla mlpa</p>
         
-            <asp:Button ID="Button1" runat="server" Text="Ξεκίνα το τεστ" />
+            <asp:Button ID="Button1" runat="server" OnClick="test1" Text="Ξεκίνα το τεστ"/>
         
     </form>
 </body>
