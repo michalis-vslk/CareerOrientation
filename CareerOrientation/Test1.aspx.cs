@@ -13,8 +13,7 @@ namespace CareerOrientation
         List<RadioButton> checkedButtons;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
+            
                 checkedButtons = new List<RadioButton>();
                 String typeTest = Session["Test"].ToString();
                 if (typeTest == "test1")
@@ -22,7 +21,7 @@ namespace CareerOrientation
                     populateTable(typeTest);
                 }
 
-            }
+            
         }
         private void populateTable(string typeTest)
         {
@@ -55,12 +54,14 @@ namespace CareerOrientation
                         TableCell answerCell = new TableCell();
                         RadioButton radioButton = new RadioButton();
                         //radioButton.ID = questionName + "r" + (j - 2);
+                        radioButton.AutoPostBack=true;
                         radioButton.GroupName = questionName;
                         radioButton.Text = reader.GetString(j);
                         radioButton.CheckedChanged += new EventHandler(this.CheckedChanged);
                         answerCell.Controls.Add(radioButton);
                         answerRow.Cells.Add(answerCell);
                         TestTable.Rows.Add(answerRow);
+                        
                     }
                 }
                 list.RemoveAt(randomIndex);
@@ -70,6 +71,8 @@ namespace CareerOrientation
 
         private void CheckedChanged(object sender, EventArgs e)
         {
+            string script2 = "alert(\" here2\")";
+            ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script2, true);
             RadioButton radioButton = (RadioButton)sender;
 
             // Clear the previous list of checked buttons

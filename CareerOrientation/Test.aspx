@@ -13,17 +13,21 @@
 </head>
 <body>
     
-        <form id="form1" runat="server">
-    
-        <asp:Label ID="testlabel" runat="server">hey</asp:Label>
-   <br />
-         <asp:Button ID="Button1" runat="server" Text="Button" OnClick="showTest_Click"/>
-        
-        <iframe runat="server" id="frame" width="100%" class="auto-style1"></iframe>
-        
-    
-           
-        </form>
+        <form runat="server">
+            <div>
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            </div>
+        <div>
+            <asp:Label ID="lblQuestion" runat="server" Text=""></asp:Label>
+        </div>
+        <div>
+            <asp:RadioButtonList ID="rbOptions" runat="server" RepeatDirection="Vertical">
+            </asp:RadioButtonList>
+        </div>
+        <div>
+            <asp:Button ID="btnNext" runat="server" Text="Next" OnClick="btnNext_Click" />
+        </div>
+    </form>
         
     
 </body>
